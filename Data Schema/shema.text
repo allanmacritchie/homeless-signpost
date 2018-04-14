@@ -1,0 +1,36 @@
+User = {
+'Name':'',
+'Password:'',
+'SessionID=''
+}
+Search = {
+'category':'',
+'location':'',
+'date':'',
+}
+Service = {
+'Name':'',
+'Address1':'',
+'Address2':'',
+'Address3':'',
+'Postcode':''
+'Contact':'',
+'Opening1':'',
+'Closing1':'',
+'Opening2':'',
+'Closing2':'',
+'Opening3':'',
+'Closing3':'',
+'Opening4':'',
+'Closing4':'',
+'Opening5':'',
+'Closing5':'',
+'Opening6':'',
+'Closing6':'',
+'Opening7':'',
+'Closing7':'',
+'Telephone:'',
+'email':''
+'reviewDate':'',
+'Owner':''
+}

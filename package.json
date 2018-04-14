@@ -1,0 +1,38 @@
+{
+  "name": "homeless-signpost",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allanmacritchie/homeless-signpost.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allanmacritchie/homeless-signpost/issues"
+  },
+  "homepage": "https://github.com/allanmacritchie/homeless-signpost#readme",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "bookshelf": "^0.10.4",
+    "connect-ensure-login": "^0.1.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "csv": "^2.0.0",
+    "express": "^4.16.2",
+    "express-hbs": "^1.0.4",
+    "express-session": "^1.15.6",
+    "knex": "^0.13.0",
+    "lodash": "^4.17.4",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "sha.js": "^2.4.9",
+    "sqlite3": "^3.1.13"
+  }
+}
