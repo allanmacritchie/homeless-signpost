@@ -15,6 +15,27 @@ exports.seed = transformer.seed({
         transfomerHeader('Address 2', 'address2'),
         transfomerHeader('Address 3', 'address3'),
         transfomerHeader('TownCity', 'city'),
+        transfomerHeader('Postcode', 'postcode'),
+        transfomerHeader('Category', 'category_id'),
+        transfomerHeader('Organisation', 'organisation'),
+        transfomerHeader('Service Description', 'description'),
+        transfomerHeader('Map Link', 'map'),
+        transfomerHeader('Website URL', 'website'),
+        transfomerHeader('Contact Number', 'telephone'),
+        transfomerHeader('null', 'geox', function(value, data) {
+            if(data[12]) {
+                let geox = data[12].split('@')[1].split(',')[1];
+                return geox;
+            }
+            return '';
+        }),
+        transfomerHeader('null', 'geoy', function(value, data) {
+            if(data[12]) {
+                let geoy = data[12].split('@')[1].split(',')[0];
+                return geoy;
+            }
+            return '';
+        }),
         // transfomerHeader('Date', 'time', function(value) {
         //     return new moment(value, "DD/MM/YYYY").format('YYYY-MM-DDT00:00:00');
         // })

@@ -3,6 +3,9 @@ exports.up = function(knex, Promise) {
     return knex.schema.createTable('services', function(table) {
         table.increments('id').primary();
         table.string('name').notNullable();
+        // table.integer('organisation_id').references('id').inTable('organisations'),
+        table.string('organisation').nullable();
+        table.integer('category_id').nullable();
         table.string('address1').nullable();
         table.string('address2').nullable();
         table.string('address3').nullable();
