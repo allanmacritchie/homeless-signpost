@@ -58,6 +58,12 @@ app.use(passport.session());
 // API endpoints
 require('./routes/api/services')(router);
 
+// Static service
+app.use(express.static('public'));
+
+// Enable all the routes above
+app.use('/', router);
+
 
 // And start our app, on the port defined in the config...
 app.listen(config.port, function() {
