@@ -6,6 +6,9 @@ const Service =  Bookshelf.Model.extend({
 
     servicehours: function() {
         return this.belongsToMany('ServiceHours');
+    },
+    category: function() {
+        return this.belongsTo('Category');
     }
 });
 

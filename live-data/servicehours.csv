@@ -1,4 +1,4 @@
-Service Id,open,close,day
+service_id,open,close,day
 51,10:00,17:00,MON
 51,10:00,17:00,TUE
 51,10:00,17:00,WED

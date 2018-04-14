@@ -24,18 +24,23 @@ exports.seed = transformer.seed({
         transfomerHeader('Contact Number', 'telephone'),
         transfomerHeader('null', 'geox', function(value, data) {
             if(data[12]) {
-                let geox = data[12].split('@')[1].split(',')[1];
-                return geox;
+                let geox = data[12].split('@')[1];
+                if(geox) {
+
+                    return geox.split(',')[1];
+                }
             }
             return '';
         }),
         transfomerHeader('null', 'geoy', function(value, data) {
             if(data[12]) {
-                let geoy = data[12].split('@')[1].split(',')[0];
-                return geoy;
+                let geoy = data[12].split('@')[1];
+                if(geoy) {
+                    return geoy.split(',')[0];
+                }
             }
             return '';
-        }),
+        })
         // transfomerHeader('Date', 'time', function(value) {
         //     return new moment(value, "DD/MM/YYYY").format('YYYY-MM-DDT00:00:00');
         // })
