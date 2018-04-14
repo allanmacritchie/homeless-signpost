@@ -4,4 +4,4 @@ module.exports = {
     Tag: require('./tag'),
     Service: require('./service'),
     User: require('./user')
-}
+};
