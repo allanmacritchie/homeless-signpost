@@ -3,7 +3,6 @@
     position:fixed;
     top:50px;
     background:#000;
-    color:#fff;
     padding:1em;
     width:100%;
 }
@@ -13,4 +12,7 @@
 .searchIn,{
     display:inline-block;
     width:25%;
+}
+.white {
+    color: #fff;
 }
