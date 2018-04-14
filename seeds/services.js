@@ -1,17 +1,22 @@
+const knex = require('knex');
+const moment = require('moment');
+
 const csv2array = require('../util/csv2array');
 
-const table_name = 'services';
+const transformer = require('knex-csv-transformer').transformer;
+const transfomerHeader = require('knex-csv-transformer').transfomerHeader;
 
-exports.seed = function (knex, Promise) {
-    let path = csv2array.find(table_name);
-
-    if(path==null) return null;
-
-    // Deletes ALL existing entries
-    return knex(table_name).del()
-        .then(function () {
-            const data = csv2array.import(path);
-            // Inserts seed entries
-            return knex(table_name).insert(data);
-        });
-};
+exports.seed = transformer.seed({
+    table: 'services',
+    file: csv2array.find('services'),
+    transformers: [
+        transfomerHeader('Service Name', 'name'),
+        transfomerHeader('Address 1', 'address1'),
+        transfomerHeader('Address 2', 'address2'),
+        transfomerHeader('Address 3', 'address3'),
+        transfomerHeader('TownCity', 'city'),
+        // transfomerHeader('Date', 'time', function(value) {
+        //     return new moment(value, "DD/MM/YYYY").format('YYYY-MM-DDT00:00:00');
+        // })
+    ]
+});
