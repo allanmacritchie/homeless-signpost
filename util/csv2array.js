@@ -3,13 +3,10 @@ const fs = require('fs');
 
 
 module.exports = {
-    import: function(filename, timestamps, skipHeaders) {
+    import: function(filename, timestamps) {
         "use strict";
         if(typeof timestamps === "undefined") {
             timestamps = true;
-        }
-        if(typeof skipHeaders === "undefined") {
-            skipHeaders = false;
         }
         console.log(`Importing ${filename}`);
         const csv = csv_parse(fs.readFileSync(filename, 'utf8'));
