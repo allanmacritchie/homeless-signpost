@@ -1,15 +1,15 @@
-// Simple hack to import John's CSV files into the local DB ;-)
 const csv_parse = require('csv-parse/lib/sync');
 const fs = require('fs');
 
 
 module.exports = {
-    import: function(filename, timestamps) {
+    import: function(filename, timestamps, skipHeaders) {
         "use strict";
-        /** @type {Array} */
-
         if(typeof timestamps === "undefined") {
             timestamps = true;
+        }
+        if(typeof skipHeaders === "undefined") {
+            skipHeaders = false;
         }
         console.log(`Importing ${filename}`);
         const csv = csv_parse(fs.readFileSync(filename, 'utf8'));
