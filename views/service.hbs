@@ -1,4 +1,4 @@
-<pre>/views/service.hbs</pre>
+<!--<pre>/views/service.hbs</pre>-->
 <div class="service">
     <h1>
         Name:{{service.name}}
@@ -7,9 +7,11 @@
 width="600"
 height="450"
 frameborder="0" style="border:0"
-src="https://www.google.co.uk/maps/embed/v1/place/98+W+George+St,+Glasgow+G2+1PJ/@55.8623108,-4.2575481,17z/data=!3m1!4b1!4m8!1m2!2m1!1s98+West+George+Street,+Glasgow+G2+1PJ!3m4!1s0x4888469fd53b04c9:0x7691cc45f2862def!8m2!3d55.8623078!4d-4.2553594" allowfullscreen>
+src="https://www.google.com/maps/embed/v1/place?q=EH1+1DF&key=AIzaSyC_SpOOSz16oNC51VVrx3D38U2sNyikCM0" allowfullscreen>
 </iframe>
-    {{service.website}}
+<br/>
+<br/>
+    <a href="{{service.website}}">Service homepage</a>
 
     <!-- this makes JS in the console, go look... -->
     {{{dump service}}}
@@ -18,31 +20,34 @@ src="https://www.google.co.uk/maps/embed/v1/place/98+W+George+St,+Glasgow+G2+1PJ
 
 </div>
 {{#if assets.length}}
+<br/>
 <table id="assets" class="" cellspacing="0" width="100%">
     <thead>
+    <tr>
+        <th>Name</th>
+        <!--<th>Type</th>-->
+        <th>Description</th>
+        <th>Link</th>
+    </tr>
+    </thead>
+    <!--<tfoot>
     <tr>
         <th>Name</th>
         <th>Type</th>
         <th>Description</th>
         <th>Link</th>
     </tr>
-    </thead>
-    <tfoot>
-    <tr>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Link</th>
-    </tr>
-    </tfoot>
+    </tfoot>-->
     <tbody>
     {{#each assets}}
         <tr>
             <td>{{this.name}}</td>
-            <td>{{this.type}}</td>
+            <!--<td>{{this.type}}</td>-->
             <td>{{this.description}}</td>
             <td><a href="{{this.uri}}">VISIT</a></td>
         </tr>
     {{/each}}
     </tbody>
 </table>
+<br/>
 {{/if}}

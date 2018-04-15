@@ -14,7 +14,7 @@
     width:20%;
     height:10em;
     background:red;
-    margin:2.5% 0; 
+    margin:2.5% 0;
     display:inline-block;
 }
 #searchbar >input{
@@ -26,4 +26,41 @@
 }
 .white {
     color: #fff;
+}
+
+.container{
+  display:grid;
+  grid-template-columns:repeat(6, 1fr);
+  grid-template-rows:100px 300px 30px;
+    grid-gap:5px;
+  grid-template-areas:"h h h h h h "
+                      "a a a . m m "
+                      "f f f f f f ";
+}
+
+.header,.main,.aside,.footer{
+    border-radius:5px;
+  font-weight:bold;
+  font-size:20px;
+  text-align:center;
+
+}
+.header{
+background-color:magenta;
+  grid-area:h;
+}
+
+.main{
+ background-color:yellow;
+  grid-area:m;
+}
+
+.aside{
+  background-color:blue;
+  grid-area:a;
+}
+
+.footer{
+background-color:black;
+  grid-area:f;
 }
