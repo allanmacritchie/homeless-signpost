@@ -6,27 +6,38 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>HARBR - </title>
       <link rel="icon" type="image/png" href="/img/favicon.png">
-      <link href="/js/jquery.js" rel="stylesheet">
-      <link href="/css/demo.css" rel="stylesheet">
+      <!--<link href="/js/jquery.js" rel="stylesheet">
+      <link href="/css/demo.css" rel="stylesheet">-->
 
       <meta name="description" content="">
       <link rel="manifest" href="site.webmanifest">
-      <link rel="apple-touch-icon" href="icon.png">
+      <link rel="apple-touch-icon" href="/icon.png">
       <!-- Place favicon.ico in the root directory -->
-      <link rel="stylesheet" href="css/normalize.css">
-      <link rel="stylesheet" href="css/main.css">
+
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-      <link rel="stylesheet" href="css/styles.css"/>
+      <link rel="stylesheet" href="/css/styles.css"/>
+      <link rel="stylesheet" href="/css/normalize.css">
+      <link rel="stylesheet" href="/css/main.css">
     {{{block head}}}
   </head>
   <body>
-  <pre>/views/layouts/default.hbs</pre>
+  {{> navbar }}
+  <!--<pre>/views/layouts/default.hbs</pre>-->
   {{{body}}}
-<h5>
-    All non-server-side processed files are served from <pre>/public</pre>
 
-</h5>
-
+  <!--
+<h5>All non-server-side processed files are served from <pre>/public</pre></h5>-->
+  {{> footer }}
+  <footer>
+       <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+       <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+       <script src="/js/vendor/jquery-3.2.1.min.js"></script>
+       <script src="/js/plugins.js"></script>
+       <script src="/js/main.js"></script>
+       <script src="/js/scripts.js"></script>
+       <!-- Google Analytics code goes here-->
+   </footer>
+   <script src="https://www.google-analytics.com/analytics.js" async defer></script>
   </body>
 </html>
