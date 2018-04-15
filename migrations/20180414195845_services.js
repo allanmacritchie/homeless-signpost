@@ -5,7 +5,8 @@ exports.up = function(knex, Promise) {
         table.string('name').notNullable();
         // table.integer('organisation_id').references('id').inTable('organisations'),
         table.string('organisation').nullable();
-        table.integer('category_id').nullable();
+        //table.integer('category_id').nullable();
+        table.integer('category_id').references('categories.id');
         table.string('address1').nullable();
         table.string('address2').nullable();
         table.string('address3').nullable();

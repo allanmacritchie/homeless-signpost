@@ -6,7 +6,9 @@ module.exports = {
     client: 'sqlite3',
     connection: {
       filename: config.db+".sqlite"
-    }
+    },
+
+      useNullAsDefault: true
   },
 
   staging: {
@@ -39,5 +41,5 @@ module.exports = {
     migrations: {
       tableName: 'knex_migrations'
     }
-  }
+  },
 };
