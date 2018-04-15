@@ -23,13 +23,11 @@ To start server
 
 	npm run server
 	
-Or
+Or;
 
 	npm start
 	
-Or
-
-	Use the included Dockerfile for ease of portability and execution on Windows, MacOS, Linux, and just about anything that takes electricity these days, right?
+Or; use the included Dockerfile for ease of portability and execution on Windows, MacOS, Linux, and just about anything that takes electricity these days, right?
 
 
 	
