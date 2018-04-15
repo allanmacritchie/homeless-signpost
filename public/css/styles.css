@@ -32,10 +32,8 @@
   display:grid;
   grid-template-columns:repeat(6, 1fr);
   grid-template-rows:100px 300px 30px;
-    grid-gap:5px;
-  grid-template-areas:"h h h h h h "
-                      "a a a . m m "
-                      "f f f f f f ";
+  grid-gap:5px;
+
 }
 
 .header,.main,.aside,.footer{
