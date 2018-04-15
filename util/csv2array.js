@@ -8,7 +8,6 @@ module.exports = {
         if(typeof timestamps === "undefined") {
             timestamps = true;
         }
-        console.log(`Importing ${filename}`);
         const csv = csv_parse(fs.readFileSync(filename, 'utf8'));
         const headers = csv[0];
 
