@@ -18,18 +18,23 @@ module.exports = function(router) {
                 .then(function (service) {
                     response.service = service.toJSON();
                     console.log(response);
-                    Asset
+                    console.log(req.params);
+                    return Asset
                         .query('where', 'service_id', '=', req.params.id)
                         .fetch({
                             // withRelated: ['Categories']
                         })
                 })
                 .then(function (assets) {
+                    console.log(assets);
                     if(assets) {
                         response.assets = assets.toJSON();
                     } else {
                         response.assets = [];
                     }
+                    if(typeof response.assets.length === 'undefined') {
+                        response.assets = [response.assets];
+                    };
                     res.render('service', response);
                 })
                 .catch(function (err) {

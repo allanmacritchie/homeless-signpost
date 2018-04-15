@@ -5,7 +5,38 @@
         </h1>
 
     {{service.website}}
-{{{dump service}}}
+
+    <!-- this makes JS in the console, go look... -->
+    {{{dump service}}}
     {{{dump assets}}}
 
+
 </div>
+
+<table id="assets" class="" cellspacing="0" width="100%">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Link</th>
+    </tr>
+    </thead>
+    <tfoot>
+    <tr>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Link</th>
+    </tr>
+    </tfoot>
+    <tbody>
+    {{#each assets}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.type}}</td>
+            <td>{{this.description}}</td>
+            <td><a href="{{this.uri}}">VISIT</a></td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
