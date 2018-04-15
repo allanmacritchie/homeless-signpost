@@ -30,7 +30,6 @@
 .white {
     color: #fff;
 }
-<<<<<<< HEAD
 .categories{
     margin-left:2em;
 }
@@ -45,16 +44,13 @@
     width:15%;
     margin: 0 42.25%;
 }
-=======
 
 .container{
   display:grid;
   grid-template-columns:repeat(6, 1fr);
   grid-template-rows:100px 300px 30px;
     grid-gap:5px;
-  grid-template-areas:"h h h h h h "
-                      "a a a . m m "
-                      "f f f f f f ";
+
 }
 
 .header,.main,.aside,.footer{
@@ -62,7 +58,6 @@
   font-weight:bold;
   font-size:20px;
   text-align:center;
-
 }
 .header{
 background-color:magenta;
@@ -83,4 +78,3 @@ background-color:magenta;
 background-color:black;
   grid-area:f;
 }
->>>>>>> 9abcacd3b88d5285a72277ba7fb1c8cf0542829b
