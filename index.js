@@ -68,6 +68,8 @@ require('./routes/services')(router);
 require('./routes/category')(router);
 require('./routes/categories')(router);
 
+require('./routes/pages')(router);
+
 // Static service
 app.use(express.static('public'));
 
