@@ -1,0 +1,10 @@
+
+<pre>/views/categories.hbs</pre>
+<div class="categories">
+    {{#each categories}}
+        <div class="book row">
+            <a href="/category/{{this.id}}">{{this.name}}</a>
+        </div>
+        <hr>
+    {{/each}}
+</div>

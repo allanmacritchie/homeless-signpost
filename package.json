@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "init": "./node_modules/.bin/knex migrate:latest",
+    "seed": "./node_modules/.bin/knex seed:run",
+    "server": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -28,8 +32,11 @@
     "express-hbs": "^1.0.4",
     "express-session": "^1.15.6",
     "knex": "^0.13.0",
+    "knex-csv-transformer": "^1.0.4",
     "lodash": "^4.17.4",
+    "moment": "^2.22.0",
     "morgan": "^1.9.0",
+    "npm": "^5.8.0",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "sha.js": "^2.4.9",

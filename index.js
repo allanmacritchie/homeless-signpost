@@ -54,3 +54,28 @@ const passport = require('./lib/auth');
 // session.
 app.use(passport.initialize());
 app.use(passport.session());
+
+// API endpoints
+require('./routes/api/service')(router);
+require('./routes/api/services')(router);
+
+require('./routes/api/category')(router);
+require('./routes/api/categories')(router);
+
+require('./routes/service')(router);
+require('./routes/services')(router);
+
+require('./routes/category')(router);
+require('./routes/categories')(router);
+
+// Static service
+app.use(express.static('public'));
+
+// Enable all the routes above
+app.use('/', router);
+
+
+// And start our app, on the port defined in the config...
+app.listen(config.port, function() {
+    console.log("HARBR server running, and listening on http://localhost:%d/ in %s mode", config.port, app.get('env'));
+});
