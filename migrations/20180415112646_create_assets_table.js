@@ -6,6 +6,7 @@ exports.up = function(knex, Promise) {
         table.string('name').nullable();
         table.string('type').nullable();
         table.string('uri').nullable();
+        table.string('description').nullable();
         table.timestamps();
     })
 };
