@@ -1,0 +1,10 @@
+
+<pre>/views/services.hbs</pre>
+<div class="services">
+    {{#each services}}
+        <div class="book row">
+            <a href="/service/{{this.id}}">{{this.name}}</a>
+        </div>
+        <hr>
+    {{/each}}
+</div>

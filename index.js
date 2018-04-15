@@ -56,9 +56,17 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // API endpoints
+require('./routes/api/service')(router);
 require('./routes/api/services')(router);
-require('./routes/services')(router);
+
+require('./routes/api/category')(router);
+require('./routes/api/categories')(router);
+
 require('./routes/service')(router);
+require('./routes/services')(router);
+
+require('./routes/category')(router);
+require('./routes/categories')(router);
 
 // Static service
 app.use(express.static('public'));

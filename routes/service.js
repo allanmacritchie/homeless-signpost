@@ -6,13 +6,6 @@ const Services = require('../collections').Services;
 const _ = require('lodash');
 
 module.exports = function(router) {
-
-    router.route('/service')
-    // fetch all services
-        .get(function (req, res) {
-                res.redirect('/services');
-            });
-
     router.route('/service/:id')
     // fetch all services
         .get(function (req, res) {
