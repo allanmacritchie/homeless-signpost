@@ -36,7 +36,10 @@
 
 }
 
-.header,.main,.aside,.footer{
+.picture{
+  
+}
+.header,.main,.aside,.footer, .picture{
     border-radius:5px;
   font-weight:bold;
   font-size:20px;
