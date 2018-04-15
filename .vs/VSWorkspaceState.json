@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\collections",
+    "\\lib",
+    "\\models",
+    "\\public",
+    "\\public\\css",
+    "\\public\\images",
+    "\\views",
+    "\\views\\layouts",
+    "\\views\\partials"
+  ],
+  "SelectedNode": "\\public\\css\\styles.css",
+  "PreviewInSolutionExplorer": false
+}
