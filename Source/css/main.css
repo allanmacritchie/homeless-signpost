@@ -83,6 +83,38 @@ textarea {
 }
 
 /* ==========================================================================
+   styling for grid
+   ========================================================================== */
+   .item1,.item4,.item9{
+     grid-area:big;
+   }
+   .item2,.item3,.item5,.item6,.item7,.item8{
+     grid-area:wee;
+   }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'wee wee'
+    'big wee'
+    'wee wee'
+    'wee wee'
+    'large large';
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-container > div {
+  background-color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+
+
+
+/* ==========================================================================
    Browser Upgrade Prompt
    ========================================================================== */
 
